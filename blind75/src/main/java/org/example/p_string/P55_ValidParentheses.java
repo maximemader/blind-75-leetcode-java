@@ -10,16 +10,15 @@ public class P55_ValidParentheses {
     public boolean isValid(String s) {
         var stack = new Stack<Character>();
 
-        for(var c : s.toCharArray())
-        {
-            if(c == '(' || c == '{' || c == '[')
+        for (var c : s.toCharArray()) {
+            if (c == '(' || c == '{' || c == '[')
                 stack.push(c);
-            else if(stack.isEmpty())
+            else if (stack.isEmpty())
                 return false;
             else {
-                if(c == ')' && stack.pop() != '(') return false;
-                if(c == '}' && stack.pop() != '{') return false;
-                if(c == ']' && stack.pop() != '[') return false;
+                if (c == ')' && stack.pop() != '(') return false;
+                if (c == '}' && stack.pop() != '{') return false;
+                if (c == ']' && stack.pop() != '[') return false;
             }
         }
 

@@ -12,10 +12,10 @@ public class P02_BestTimeToBuyAndSellStock {
         for (int i = 1; i < prices.length; i++) {
             var profit = prices[i] - lowestPrice;
 
-            if(profit > highestPrice)
+            if (profit > highestPrice)
                 highestPrice = profit;
 
-            if(prices[i] < lowestPrice)
+            if (prices[i] < lowestPrice)
                 lowestPrice = prices[i];
         }
 
