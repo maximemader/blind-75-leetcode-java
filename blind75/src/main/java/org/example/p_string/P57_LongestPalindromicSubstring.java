@@ -1,7 +1,5 @@
 package org.example.p_string;
 
-import java.util.Arrays;
-
 /*
     Longest Palindromic Substring
     https://leetcode.com/problems/longest-palindromic-substring/

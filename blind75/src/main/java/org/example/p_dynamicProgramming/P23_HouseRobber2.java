@@ -8,10 +8,10 @@ import java.util.Arrays;
  */
 public class P23_HouseRobber2 {
     public int rob(int[] nums) {
-        if(nums == null || nums.length == 0)
+        if (nums == null || nums.length == 0)
             return 0;
 
-        if(nums.length == 1)
+        if (nums.length == 1)
             return nums[0];
 
         return Math.max(

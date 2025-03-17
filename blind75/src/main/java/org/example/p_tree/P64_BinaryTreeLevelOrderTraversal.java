@@ -36,5 +36,6 @@ public class P64_BinaryTreeLevelOrderTraversal {
         return result;
     }
 
-    record NodeLevel(TreeNode node, int level) {}
+    record NodeLevel(TreeNode node, int level) {
+    }
 }

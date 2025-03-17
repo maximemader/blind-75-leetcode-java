@@ -22,15 +22,13 @@ public class P29_PacificAtlanticWaterFlow {
         // (see https://assets.leetcode.com/uploads/2021/06/08/waterflow-grid.jpg)
 
         // DFS from the borders
-        for (var i = 0; i < height; ++i)
-        {
+        for (var i = 0; i < height; ++i) {
             DFS(heights, canFlowToPacific, i, 0);
             DFS(heights, canFlowToAtlantic, i, width - 1);
         }
 
         // DFS from the borders
-        for (var j = 0; j < width; ++j)
-        {
+        for (var j = 0; j < width; ++j) {
             DFS(heights, canFlowToPacific, 0, j);
             DFS(heights, canFlowToAtlantic, height - 1, j);
         }
@@ -39,13 +37,12 @@ public class P29_PacificAtlanticWaterFlow {
             for (var j = 0; j < width; ++j)
                 if (canFlowToPacific[i][j] && canFlowToAtlantic[i][j])
 
-        result.add(Arrays.asList(i, j));
+                    result.add(Arrays.asList(i, j));
 
         return result;
     }
 
-    private static void DFS(int[][] heights, boolean[][] canFlow, int row, int col)
-    {
+    private static void DFS(int[][] heights, boolean[][] canFlow, int row, int col) {
         if (canFlow[row][col])
             return;
 
@@ -53,8 +50,7 @@ public class P29_PacificAtlanticWaterFlow {
 
         var directions = Arrays.asList(-1, 0, 1, 0, -1);
 
-        for (var direction = 0; direction < 4; ++direction)
-        {
+        for (var direction = 0; direction < 4; ++direction) {
             var nextRow = row + directions.get(direction);
             var nextCol = col + directions.get(direction + 1);
 

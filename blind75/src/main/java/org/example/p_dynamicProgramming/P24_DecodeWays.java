@@ -16,14 +16,13 @@ public class P24_DecodeWays {
         dp[0] = 1;
         dp[1] = 1;
 
-        for (var i = 2; i <= s.length(); ++i)
-        {
+        for (var i = 2; i <= s.length(); ++i) {
             if (s.charAt(i - 1) != '0')
                 dp[i] += dp[i - 1];
 
-            var n = Integer.parseInt(s.substring((i - 2),i));
+            var n = Integer.parseInt(s.substring((i - 2), i));
 
-            if(n >= 10 && n <= 26)
+            if (n >= 10 && n <= 26)
                 dp[i] += dp[i - 2];
         }
 
