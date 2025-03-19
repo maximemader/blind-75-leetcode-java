@@ -1,4 +1,4 @@
-package org.example.p_tree;
+package org.example.p_string;
 
 /*
     Longest Repeating Character Replacement
@@ -11,13 +11,13 @@ public class P51_LongestRepeatingCharacterReplacement {
         var left = 0;
         var max = 0;
 
-        for (var right = 0; right < s.length(); ++right) {
+        for(var right = 0; right < s.length(); ++right) {
             var ci = s.charAt(right) - 'A';
             ++freq[ci];
             highestFrequency = Math.max(highestFrequency, freq[ci]);
 
             var frequency = (right - left + 1) - highestFrequency;
-            if (frequency > k) {
+            if(frequency > k) {
                 freq[s.charAt(left) - 'A']--;
                 left++;
             }
